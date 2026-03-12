@@ -3,7 +3,8 @@
 > **Privacy-Preserving Computation, From Operators to Algorithms.**
 >
 > **隐私计算，从算子到算法。**
-<img width="3396" height="891" alt="图片生成请求 (1)" src="https://github.com/user-attachments/assets/4b7735a7-717a-49bd-a118-c062a6a724ed" />
+<img width="3396" height="891" alt="图片生成请求 (1)" src="https://github.com/user-attachments/assets/d02f2b18-665a-4ae4-8641-8727410168ab" />
+
 
 
 
