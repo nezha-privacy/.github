@@ -22,7 +22,9 @@ flowchart TD
     end
 
     subgraph Query["Data Query / 数据查询"]
+      direction LR
       SecureRJ["<b>SecureRJ</b><br/>Approximate Query · 安全近似查询"]
+      SecureSkyline["<b>SecureSkyline</b><br/>Skyline Query · Skyline 查询"]
     end
   end
 
@@ -38,6 +40,7 @@ flowchart TD
   Priv_LLM --> PPPU
   Priv_LLM --> OpenFHE
   SecureRJ --> PPPU
+  SecureSkyline --> PPPU
 
   style Applications fill:#e8f4f8,stroke:#2196F3,stroke-width:2px,color:#333
   style Learning fill:#e3f2fd,stroke:#1976D2,stroke-width:1px,color:#333
@@ -50,6 +53,7 @@ flowchart TD
   style DL fill:#b0bec5,stroke:#607D8B,color:#000
   style Priv_LLM fill:#90caf9,stroke:#1565C0,color:#000
   style SecureRJ fill:#90caf9,stroke:#1565C0,color:#000
+  style SecureSkyline fill:#90caf9,stroke:#1565C0,color:#000
 ```
 
 ---
@@ -79,6 +83,7 @@ flowchart TD
 | Repository | Description | Status |
 |:-----------|:------------|:------:|
 | [**SecureRJ**](https://github.com/nezha-privacy/SecureRJ) | An approximate query framework built on ABY3 secure multi-party computation. Supports Join, GroupBy, Sort, Sampling, and more. <br> 基于 ABY3 安全多方计算的近似查询框架，支持 Join、GroupBy、Sort、Sampling 等操作。 | Private |
+| [**SecureSkyline**](https://github.com/nezha-privacy/SecureSkyline) | A privacy-preserving Skyline query framework built on PPPU MPC primitives. Computes Pareto-optimal results across multi-party data. <br> 基于 PPPU 安全多方计算的隐私保护 Skyline 查询框架，支持多方数据上的帕累托最优计算。 | Private |
 
 ---
 
