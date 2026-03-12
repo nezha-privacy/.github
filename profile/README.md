@@ -9,43 +9,40 @@
 ## Architecture / 项目架构
 
 ```mermaid
-block-beta
-  columns 3
+flowchart TD
 
-  block:Applications["Applications / 上层算法"]:3
-    columns 3
+  subgraph Applications["<b>Applications / 上层算法</b>"]
+    direction LR
 
-    block:Learning["Learning / 学习"]:2
-      columns 3
-      PPPU_ML["PPPU-ML\nShallow Learning\n浅层学习"]
-      DL["Deep Learning\n深度学习\n(Planned)"]
-      Priv_LLM["Priv-LLM\nLLM\n大模型"]
+    subgraph Learning["Learning / 学习"]
+      direction LR
+      PPPU_ML["<b>PPPU-ML</b><br/>Shallow Learning · 浅层学习"]
+      DL["<b>Deep Learning</b><br/>深度学习 · Planned"]
+      Priv_LLM["<b>Priv-LLM</b><br/>LLM · 大模型"]
     end
 
-    block:Query["Data Query / 数据查询"]:1
-      SecureRJ["SecureRJ\nApproximate Query\n安全近似查询"]
+    subgraph Query["Data Query / 数据查询"]
+      SecureRJ["<b>SecureRJ</b><br/>Approximate Query · 安全近似查询"]
     end
   end
 
-  space:3
-
-  block:Infrastructure["Infrastructure / 底层算子"]:3
-    columns 3
-    PPPU["PPPU\nMPC · Semi2K\n安全多方计算"]
-    OpenFHE["OpenFHE\nHE · BFV/BGV/CKKS\n同态加密"]
-    GoogleDP["Google DP\nDP · Laplace/Gaussian\n差分隐私"]
+  subgraph Infrastructure["<b>Infrastructure / 底层算子</b>"]
+    direction LR
+    PPPU["<b>PPPU</b><br/>MPC · Semi2K · 安全多方计算"]
+    OpenFHE["<b>OpenFHE</b><br/>HE · BFV/BGV/CKKS · 同态加密"]
+    GoogleDP["<b>Google DP</b><br/>DP · Laplace/Gaussian · 差分隐私"]
   end
 
   PPPU_ML --> PPPU
+  DL -.-> PPPU
   Priv_LLM --> PPPU
   Priv_LLM --> OpenFHE
   SecureRJ --> PPPU
-  DL --> PPPU
 
-  style Applications fill:#e8f4f8,stroke:#2196F3,stroke-width:2px
-  style Learning fill:#e3f2fd,stroke:#1976D2
-  style Query fill:#e3f2fd,stroke:#1976D2
-  style Infrastructure fill:#fff3e0,stroke:#FF9800,stroke-width:2px
+  style Applications fill:#e8f4f8,stroke:#2196F3,stroke-width:2px,color:#333
+  style Learning fill:#e3f2fd,stroke:#1976D2,stroke-width:1px,color:#333
+  style Query fill:#e3f2fd,stroke:#1976D2,stroke-width:1px,color:#333
+  style Infrastructure fill:#fff3e0,stroke:#FF9800,stroke-width:2px,color:#333
   style PPPU fill:#ffcc80,stroke:#F57C00,color:#000
   style OpenFHE fill:#ffcc80,stroke:#F57C00,color:#000
   style GoogleDP fill:#ffcc80,stroke:#F57C00,color:#000
