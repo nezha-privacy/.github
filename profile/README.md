@@ -8,35 +8,51 @@
 
 ## Architecture / 项目架构
 
-```
-┌───────────────────────────────────────────────────────────────┐
-│                   Applications / 上层算法                      │
-│                                                               │
-│  ┌───────────────────────────────┐    ┌────────────────────┐  │
-│  │      Learning / 学习          │    │  Data Query / 查询  │  │
-│  │                               │    │                    │  │
-│  │  ┌───────────┐ ┌───────────┐  │    │  ┌──────────────┐  │  │
-│  │  │  Shallow   │ │    LLM    │  │    │  │   SecureRJ   │  │  │
-│  │  │  Learning  │ │  大模型    │  │    │  │  安全近似查询  │  │  │
-│  │  │           │ │           │  │    │  │              │  │  │
-│  │  │  PPPU-ML  │ │ Priv-LLM  │  │    │  └──────────────┘  │  │
-│  │  └───────────┘ └───────────┘  │    │                    │  │
-│  │                               │    │                    │  │
-│  │  ┌───────────┐                │    │                    │  │
-│  │  │   Deep     │               │    │                    │  │
-│  │  │  Learning  │               │    │                    │  │
-│  │  │  (Planned) │               │    │                    │  │
-│  │  └───────────┘                │    │                    │  │
-│  └───────────────────────────────┘    └────────────────────┘  │
-├───────────────────────────────────────────────────────────────┤
-│                  Infrastructure / 底层算子                     │
-│                                                               │
-│  ┌─────────────────┐ ┌─────────────────┐ ┌─────────────────┐ │
-│  │   PPPU (MPC)    │ │ OpenFHE (HE)    │ │ Google DP (DP)  │ │
-│  │  安全多方计算    │ │  同态加密        │ │  差分隐私        │ │
-│  │  Semi2K         │ │  BFV/BGV/CKKS   │ │  Laplace/Gauss  │ │
-│  └─────────────────┘ └─────────────────┘ └─────────────────┘ │
-└───────────────────────────────────────────────────────────────┘
+```mermaid
+block-beta
+  columns 3
+
+  block:Applications["Applications / 上层算法"]:3
+    columns 3
+
+    block:Learning["Learning / 学习"]:2
+      columns 3
+      PPPU_ML["PPPU-ML\nShallow Learning\n浅层学习"]
+      DL["Deep Learning\n深度学习\n(Planned)"]
+      Priv_LLM["Priv-LLM\nLLM\n大模型"]
+    end
+
+    block:Query["Data Query / 数据查询"]:1
+      SecureRJ["SecureRJ\nApproximate Query\n安全近似查询"]
+    end
+  end
+
+  space:3
+
+  block:Infrastructure["Infrastructure / 底层算子"]:3
+    columns 3
+    PPPU["PPPU\nMPC · Semi2K\n安全多方计算"]
+    OpenFHE["OpenFHE\nHE · BFV/BGV/CKKS\n同态加密"]
+    GoogleDP["Google DP\nDP · Laplace/Gaussian\n差分隐私"]
+  end
+
+  PPPU_ML --> PPPU
+  Priv_LLM --> PPPU
+  Priv_LLM --> OpenFHE
+  SecureRJ --> PPPU
+  DL --> PPPU
+
+  style Applications fill:#e8f4f8,stroke:#2196F3,stroke-width:2px
+  style Learning fill:#e3f2fd,stroke:#1976D2
+  style Query fill:#e3f2fd,stroke:#1976D2
+  style Infrastructure fill:#fff3e0,stroke:#FF9800,stroke-width:2px
+  style PPPU fill:#ffcc80,stroke:#F57C00,color:#000
+  style OpenFHE fill:#ffcc80,stroke:#F57C00,color:#000
+  style GoogleDP fill:#ffcc80,stroke:#F57C00,color:#000
+  style PPPU_ML fill:#90caf9,stroke:#1565C0,color:#000
+  style DL fill:#b0bec5,stroke:#607D8B,color:#000
+  style Priv_LLM fill:#90caf9,stroke:#1565C0,color:#000
+  style SecureRJ fill:#90caf9,stroke:#1565C0,color:#000
 ```
 
 ---
