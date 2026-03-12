@@ -118,6 +118,13 @@ We welcome contributions! Please follow these steps:
 4. **Push** to your fork and create a **Pull Request** / 推送到你的 fork 并创建 PR
 5. **Request review** before merging / 请求 Code Review 后再合并
 
+> **Guides / 开发文档：**
+>
+> | Document / 文档 | Description / 说明 |
+> |:----------------|:-------------------|
+> | [Nezha Privacy 贡献指南 (PDF)](https://github.com/nezha-privacy/PPPU/blob/main/doc/development/2_Nezha%20privacy%20%E8%B4%A1%E7%8C%AE%E6%8C%87%E5%8D%97.pdf) | Contribution guide for the Nezha Privacy project / 项目贡献指南 |
+> | [使用 OpenCode 开发指南](https://github.com/nezha-privacy/PPPU/blob/main/doc/development/opencode-guide.md) | Guide for developing with OpenCode / 使用 OpenCode 进行开发的指南 |
+>
 > For detailed contribution guidelines, see the documentation in each repository.
 >
 > 详细的贡献指南请参阅各仓库中的文档。
