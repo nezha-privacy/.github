@@ -31,9 +31,11 @@
 ├───────────────────────────────────────────────────────────────┤
 │                  Infrastructure / 底层算子                     │
 │                                                               │
-│                          PPPU                                 │
-│            Secure MPC Primitives (Semi2K)                     │
-│            安全多方计算基础算子                                  │
+│  ┌─────────────────┐ ┌─────────────────┐ ┌─────────────────┐ │
+│  │   PPPU (MPC)    │ │ OpenFHE (HE)    │ │ Google DP (DP)  │ │
+│  │  安全多方计算    │ │  同态加密        │ │  差分隐私        │ │
+│  │  Semi2K         │ │  BFV/BGV/CKKS   │ │  Laplace/Gauss  │ │
+│  └─────────────────┘ └─────────────────┘ └─────────────────┘ │
 └───────────────────────────────────────────────────────────────┘
 ```
 
@@ -43,9 +45,11 @@
 
 ### Infrastructure / 底层算子
 
-| Repository | Description | Status |
+| Repository | Description | Source |
 |:-----------|:------------|:------:|
-| [**PPPU**](https://github.com/nezha-privacy/PPPU) | Privacy Processing Unit — MPC primitives under the Semi2K protocol, including arithmetic, comparison, math, and shape operations. <br> 隐私计算处理单元 — 提供 Semi2K 协议下的算术、比较、数学、排序等安全计算原语。 | Public |
+| [**PPPU**](https://github.com/nezha-privacy/PPPU) | **MPC** — Privacy Processing Unit. Secure multi-party computation primitives under the Semi2K protocol, including arithmetic, comparison, math, and shape operations. <br> **安全多方计算** — 隐私计算处理单元，提供 Semi2K 协议下的算术、比较、数学、排序等安全计算原语。 | Self-hosted |
+| [**OpenFHE**](https://github.com/openfheorg/openfhe-development) | **HE** — Homomorphic Encryption library. Supports BFV, BGV, CKKS, TFHE/FHEW schemes with Threshold FHE and Proxy Re-Encryption. <br> **同态加密** — 支持 BFV、BGV、CKKS、TFHE/FHEW 全方案，内置门限同态加密与代理重加密。 | External |
+| [**Google DP**](https://github.com/google/differential-privacy) | **DP** — Differential Privacy library. Production-grade Laplace/Gaussian mechanisms, DP aggregations (Count, Sum, Mean, Variance, Quantiles), and privacy budget accounting. <br> **差分隐私** — 生产级 Laplace/Gaussian 机制、DP 聚合算法、隐私预算管理。 | External |
 
 ### Applications / 上层算法
 
@@ -71,9 +75,11 @@
 |:------|:-------------|
 | Language | C++20 (GCC 13+) |
 | MPC Protocols | Semi2K (SPDZ2k), ABY3 |
+| HE Schemes | BFV, BGV, CKKS, TFHE/FHEW (via [OpenFHE](https://github.com/openfheorg/openfhe-development)) |
+| DP Mechanisms | Laplace, Gaussian, DP Aggregations (via [Google DP](https://github.com/google/differential-privacy)) |
 | Core Libraries | GMP, Boost, OpenMP, Eigen |
 | Networking | Boost.Asio, OpenSSL |
-| Build System | CMake |
+| Build System | CMake, Bazel |
 | Containerization | Docker |
 
 ---
