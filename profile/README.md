@@ -104,6 +104,31 @@ flowchart TD
 
 ---
 
+## Team
+
+Nezha Privacy is developed at the **State Key Laboratory of Networking and Switching Technology, Beijing University of Posts and Telecommunications (BUPT)**.
+
+**Leader:**
+
+| | Name | GitHub |
+|:--|:-----|:------:|
+| **PI** | Cheng Xiang | [@chengxiangbupt](https://github.com/chengxiangbupt) |
+
+**Members:**
+
+| GitHub | Profile |
+|:-------|:-------:|
+| [@JiangZhiyu-1024](https://github.com/JiangZhiyu-1024) | [Profile](https://github.com/JiangZhiyu-1024) |
+| [@Jumdar](https://github.com/Jumdar) | [Profile](https://github.com/Jumdar) |
+| [@Jun-g1e](https://github.com/Jun-g1e) | [Profile](https://github.com/Jun-g1e) |
+| [@kk141103](https://github.com/kk141103) | [Profile](https://github.com/kk141103) |
+| [@Murlocccc](https://github.com/Murlocccc) | [Profile](https://github.com/Murlocccc) |
+| [@qazw52](https://github.com/qazw52) | [Profile](https://github.com/qazw52) |
+| [@vctwwd](https://github.com/vctwwd) | [Profile](https://github.com/vctwwd) |
+| [@zcbbb266](https://github.com/zcbbb266) | [Profile](https://github.com/zcbbb266) |
+
+---
+
 ## Contributing
 
 We welcome contributions! Please follow these steps:

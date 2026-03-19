@@ -104,6 +104,31 @@ flowchart TD
 
 ---
 
+## 团队
+
+Nezha Privacy 由**北京邮电大学网络与交换技术国家重点实验室**开发。
+
+**负责人：**
+
+| | 姓名 | GitHub |
+|:--|:-----|:------:|
+| **PI** | 程祥 | [@chengxiangbupt](https://github.com/chengxiangbupt) |
+
+**成员：**
+
+| GitHub | 主页 |
+|:-------|:----:|
+| [@JiangZhiyu-1024](https://github.com/JiangZhiyu-1024) | [主页](https://github.com/JiangZhiyu-1024) |
+| [@Jumdar](https://github.com/Jumdar) | [主页](https://github.com/Jumdar) |
+| [@Jun-g1e](https://github.com/Jun-g1e) | [主页](https://github.com/Jun-g1e) |
+| [@kk141103](https://github.com/kk141103) | [主页](https://github.com/kk141103) |
+| [@Murlocccc](https://github.com/Murlocccc) | [主页](https://github.com/Murlocccc) |
+| [@qazw52](https://github.com/qazw52) | [主页](https://github.com/qazw52) |
+| [@vctwwd](https://github.com/vctwwd) | [主页](https://github.com/vctwwd) |
+| [@zcbbb266](https://github.com/zcbbb266) | [主页](https://github.com/zcbbb266) |
+
+---
+
 ## 参与贡献
 
 欢迎参与贡献！请遵循以下流程：
